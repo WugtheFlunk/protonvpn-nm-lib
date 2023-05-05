@@ -15,6 +15,8 @@ endif
 IMAGE_URL_DEB = ubuntu:latest
 IMAGE_URL_FED38 = fedora:38
 IMAGE_URL_ARCH = archlinux:latest
+GIT_REPO=https://github.com/WugtheFlunk/protonvpn-nm-lib.git
+GIT_BRANCH=main
 
 # Run make base to build both images based on ubuntu and fedora
 base: image-deb image-fed38 image-arch
