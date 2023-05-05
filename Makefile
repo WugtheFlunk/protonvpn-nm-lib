@@ -39,7 +39,7 @@ image-fed38: src = fedora38
 ## Make remote image form a branch make image branch=<branchName> (master default)
 image: requirements.txt docker-source
 #	docker build -t $(NAME_IMAGE):$(TAG_IMAGE) -f "$(DOCKERFILE_BUILD)" --network=host --build-arg git_repo=$(GIT_REPO) --build-arg git_branch=$(GIT_BRANCH) .
-	docker build -t "ubuntu-latest -f "$(DOCKERFILE_BUILD)" --network=host --build-arg git_repo=$(GIT_REPO) --build-arg git_branch=$(GIT_BRANCH) .
+	docker build -t "ubuntu-latest" -f "$(DOCKERFILE_BUILD)" --network=host --build-arg git_repo=$(GIT_REPO) --build-arg git_branch=$(GIT_BRANCH) .
 	docker push $(NAME_IMAGE):$(TAG_IMAGE)
 	docker tag $(NAME_IMAGE):$(TAG_IMAGE) $(NAME_IMAGE):$(TAG_IMAGE)
 
